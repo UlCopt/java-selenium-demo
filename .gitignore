@@ -11,6 +11,11 @@
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
+.idea/
+ gradle/
+ gradlew
+ gradlew.bat
+ settings.gradle
 
 # Generated files
 .idea/**/contentModel.xml
