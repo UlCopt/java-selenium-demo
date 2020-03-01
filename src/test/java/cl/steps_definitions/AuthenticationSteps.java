@@ -3,31 +3,25 @@ package cl.steps_definitions;
 import cl.cucumber.TestContext;
 import cl.page_objects.AuthenticationPage;
 import cl.page_objects.HomePage;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.When;
+import io.cucumber.java.en.Then;
 
-public class HomeSteps {
+
+public class AuthenticationSteps {
 
     private AuthenticationPage authenticationPage;
     private HomePage homePage;
     private TestContext testContext;
 
 
-    public HomeSteps(TestContext testContext) {
+    public AuthenticationSteps(TestContext testContext) {
         this.testContext = testContext;
         authenticationPage = testContext.getPageObjectManager().getAuthenticationPage();
         homePage = testContext.getPageObjectManager().getHomePage();
     }
 
-
-    @Given("Navigate to site")
-    public void navigate_to_site() {
-        homePage.navigateToHome();
+    @Then("I put a mail to create a new user account and confirm")
+    public void i_put_a_mail_to_create_a_new_user_account_and_confirm() throws Exception{
+        authenticationPage.setEmailCreate("qeqweq@asdasd.cl");
+        authenticationPage.submitCreateOption();
     }
-
-    @When("I open Signin")
-    public void i_open_Signin() throws Exception {
-        homePage.signIn();
-    }
-
 }

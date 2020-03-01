@@ -14,20 +14,15 @@ public class HomePage extends BasePageAbstract {
     WebElement contactLink;
 
     @FindBy(className = "header_user_info")
-    WebElement signIn;
-
+    //@FindBy(xpath = "/html/body/div/div[1]/header/div[2]/div/div/nav/div[1]/a")
+    WebElement singIn;
 
     public void navigateToHome() {
-        driver.get("http://automationpractice.com/index.php");
+        driver.get("http://automationpractice.com");
     }
 
-
-    public void signIn(String email) throws Exception {
-        if (PageObjectHelper.fluentWaitElement(driver, signIn)) {
-            signIn.click();
-        } else {
-            throw new Exception("No se encontró el elemento");
-        }
+    public void signIn() throws Exception {
+        PageObjectHelper.clickElement(driver, singIn);
     }
 
 

@@ -9,7 +9,7 @@ public abstract class BasePageAbstract {
 
     public BasePageAbstract(WebDriver driver) {
         this.driver = driver;
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(driver, this);
     }
 
 }

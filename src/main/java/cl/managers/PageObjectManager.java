@@ -15,19 +15,19 @@ public class PageObjectManager {
         this.driver = driver;
     }
 
-    public AuthenticationPage getAuthenticationPage(){
+    public AuthenticationPage getAuthenticationPage() {
         return (authenticationPage == null) ? authenticationPage = new AuthenticationPage(driver) : authenticationPage;
     }
 
-    public HomePage getHomePage(){
+    public HomePage getHomePage() {
         return (homePage == null) ? homePage = new HomePage(driver) : homePage;
     }
 
-    public CreateAccountPage getCreateAccountPage(){
+    public CreateAccountPage getCreateAccountPage() {
         return (createAccountPage == null) ? createAccountPage = new CreateAccountPage(driver) : createAccountPage;
     }
 
-    public MyAccountPage getMyAccountPage(){
+    public MyAccountPage getMyAccountPage() {
         return (myAccountPage == null) ? myAccountPage = new MyAccountPage(driver) : myAccountPage;
     }
 
