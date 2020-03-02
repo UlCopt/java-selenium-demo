@@ -3,7 +3,7 @@ package cl.page_objects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.Select;
+
 
 public class CreateAccountPage extends BasePageAbstract {
 
@@ -40,7 +40,7 @@ public class CreateAccountPage extends BasePageAbstract {
     @FindBy(id = "years")
     WebElement birthYear;
 
-    //Adress
+    //Address
 
     @FindBy(id = "firstname")
     WebElement firstNameAddress;
@@ -85,12 +85,12 @@ public class CreateAccountPage extends BasePageAbstract {
     WebElement submitAccount;
 
 
-    public void selectGender(final String gender) throws Exception {
-        if (gender.equalsIgnoreCase("mr.")) {
-            PageObjectHelper.clickElement(driver, mrSelect);
-        } else {
-            PageObjectHelper.clickElement(driver, mrsSelect);
-        }
+    public void selectMr() throws Exception {
+        PageObjectHelper.clickElement(driver, mrSelect);
+    }
+
+    public void selectMrs() throws Exception {
+        PageObjectHelper.clickElement(driver, mrsSelect);
     }
 
     public void setCustomerFirstName(final String firstNameValue) throws Exception {
@@ -110,10 +110,16 @@ public class CreateAccountPage extends BasePageAbstract {
     }
 
     public void selectDayOfBirth(final String dayOfBirthValue) throws Exception {
-        final Select selectDayBox = new Select(birthDay);
-        selectDayBox.selectByValue("4");
-        //birthMonth
-        //birthYear
+        PageObjectHelper.scrollVertical(driver, "0", "500");
+        PageObjectHelper.selectItemBox(driver, birthDay, dayOfBirthValue);
+    }
+
+    public void selectMonthOfBirth(final String dayOfBirthValue) throws Exception {
+        PageObjectHelper.selectItemBox(driver, birthMonth, dayOfBirthValue);
+    }
+
+    public void selectYearOfBirth(final String dayOfBirthValue) throws Exception {
+        PageObjectHelper.selectItemBox(driver, birthYear, dayOfBirthValue);
     }
 
     public void setFirstNameAddress(final String firstNameAddressValue) throws Exception {
@@ -133,6 +139,7 @@ public class CreateAccountPage extends BasePageAbstract {
     }
 
     public void setAddress2(final String address2Value) throws Exception {
+        PageObjectHelper.scrollVertical(driver, "0", "500");
         PageObjectHelper.setWebElement(driver, address2, address2Value);
     }
 
@@ -141,7 +148,7 @@ public class CreateAccountPage extends BasePageAbstract {
     }
 
     public void selectState(final String stateValue) throws Exception {
-        //todo select box
+        PageObjectHelper.selectItemBox(driver, state, stateValue);
     }
 
     public void setPostCode(final String postCodeValue) throws Exception {
@@ -149,10 +156,11 @@ public class CreateAccountPage extends BasePageAbstract {
     }
 
     public void selectCountry(final String countryValue) throws Exception {
-        //todo select box
+        PageObjectHelper.selectItemBox(driver, country, countryValue);
     }
 
     public void setAdditionalInformation(final String additionalInformationValue) throws Exception {
+        PageObjectHelper.scrollVertical(driver, "0", "600");
         PageObjectHelper.setWebElement(driver, additionalInformation, additionalInformationValue);
     }
 

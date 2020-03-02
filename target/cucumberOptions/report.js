@@ -46,11 +46,11 @@ formatter.step({
   "keyword": "And "
 });
 formatter.step({
-  "name": "I put my address \u003cADDRESS_FIRST_NAME\u003e",
+  "name": "I put my address first name \u003cADDRESS_FIRST_NAME\u003e",
   "keyword": "And "
 });
 formatter.step({
-  "name": "I put my address \u003cADDRESS_LAST_NAME\u003e",
+  "name": "I put my address last name \u003cADDRESS_LAST_NAME\u003e",
   "keyword": "And "
 });
 formatter.step({
@@ -58,11 +58,11 @@ formatter.step({
   "keyword": "And "
 });
 formatter.step({
-  "name": "I put my address \u003cADDRESS\u003e",
+  "name": "I put my address company \u003cADDRESS\u003e",
   "keyword": "And "
 });
 formatter.step({
-  "name": "I put my address cont \u003cADDRESS_CONT\u003e",
+  "name": "I put my address company cont \u003cADDRESS_CONT\u003e",
   "keyword": "And "
 });
 formatter.step({
@@ -101,6 +101,10 @@ formatter.step({
   "name": "I register my account",
   "keyword": "And "
 });
+formatter.step({
+  "name": "I Verify my account",
+  "keyword": "And "
+});
 formatter.examples({
   "name": "",
   "description": "",
@@ -134,16 +138,16 @@ formatter.examples({
         "\"FirstName\"",
         "\"LastName\"",
         "\"123456\"",
-        "\"26-06-1986\"",
+        "\"26/06/1986\"",
         "\"Address F\"",
         "\"Address L\"",
         "\"Company\"",
         "\"Adressss\"",
         "\"Address cont\"",
         "\"New York\"",
-        "\"New York\"",
+        "\"32\"",
         "\"00000\"",
-        "\"United State\"",
+        "\"21\"",
         "\"Notes\"",
         "\"4443333\"",
         "\"33334444\"",
@@ -241,7 +245,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I select my date of birth \"26-06-1986\"",
+  "name": "I select my date of birth \"26/06/1986\"",
   "keyword": "And "
 });
 formatter.match({
@@ -251,19 +255,156 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I put my address \"Address F\"",
+  "name": "I put my address first name \"Address F\"",
   "keyword": "And "
 });
 formatter.match({
-  "location": "CreateAccountSteps.i_put_my_address(String)"
+  "location": "CreateAccountSteps.i_put_my_address_first_name(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I put my address \"Address L\"",
+  "name": "I put my address last name \"Address L\"",
   "keyword": "And "
 });
 formatter.match({
-  "location": "CreateAccountSteps.i_put_my_address(String)"
+  "location": "CreateAccountSteps.i_put_my_address_last_name(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I put my company \"Company\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "CreateAccountSteps.i_put_my_company(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I put my address company \"Adressss\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "CreateAccountSteps.i_put_my_address_company(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I put my address company cont \"Address cont\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "CreateAccountSteps.i_put_my_address_company_cont(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I put my city \"New York\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "CreateAccountSteps.i_put_my_city(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I select my state \"32\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "CreateAccountSteps.i_select_my_state(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I put my zipcode \"00000\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "CreateAccountSteps.i_put_my_zipcode(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I put my country \"21\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "CreateAccountSteps.i_put_my_country(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I put some additional information \"Notes\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "CreateAccountSteps.i_put_some_additional_information(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I put home phone \"4443333\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "CreateAccountSteps.i_put_home_phone(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I put mobile phone \"33334444\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "CreateAccountSteps.i_put_mobile_phone(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I put my alias \"alias\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "CreateAccountSteps.i_put_my_alias_alias(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I register my account",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "CreateAccountSteps.i_register_my_account()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Verify my account",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "MyAccountPageSteps.i_Verify_my_account()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
 });

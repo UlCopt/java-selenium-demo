@@ -10,11 +10,11 @@ Feature: Create Account
     And I see my mail
     And I put the password <PASSWORD>
     And I select my date of birth <DAY_OF_BIRTH>
-    And I put my address <ADDRESS_FIRST_NAME>
-    And I put my address <ADDRESS_LAST_NAME>
+    And I put my address first name <ADDRESS_FIRST_NAME>
+    And I put my address last name <ADDRESS_LAST_NAME>
     And I put my company <COMPANY>
-    And I put my address <ADDRESS>
-    And I put my address cont <ADDRESS_CONT>
+    And I put my address company <ADDRESS>
+    And I put my address company cont <ADDRESS_CONT>
     And I put my city <CITY>
     And I select my state <STATE>
     And I put my zipcode <ZIPCODE>
@@ -24,7 +24,8 @@ Feature: Create Account
     And I put mobile phone <MOBILE_HOME>
     And I put my alias <ALIAS>
     And I register my account
+    And I Verify my account
 
     Examples:
-      | TITLE | FIRST_NAME | LAST_NAME     |  PASSWORD |DAY_OF_BIRTH  |ADDRESS_FIRST_NAME|ADDRESS_LAST_NAME|COMPANY    |    ADDRESS|ADDRESS_CONT     |CITY          |STATE           |ZIPCODE|COUNTRY         |ADDITIONAL_INFORMATION |HOME_PHONE|MOBILE_HOME|ALIAS|
-      | "Mr." |  "FirstName"|   "LastName" |  "123456" | "26-06-1986" | "Address F"      |"Address L"      | "Company" | "Adressss"| "Address cont"  | "New York"   | "New York"     |"00000"| "United State" |"Notes"                | "4443333"| "33334444"| "alias"|
+      | TITLE | FIRST_NAME  | LAST_NAME    |  PASSWORD |DAY_OF_BIRTH  |ADDRESS_FIRST_NAME  |ADDRESS_LAST_NAME      |COMPANY      |    ADDRESS     |ADDRESS_CONT     |CITY          |STATE |ZIPCODE|COUNTRY         |ADDITIONAL_INFORMATION |HOME_PHONE|MOBILE_HOME|ALIAS         |
+      | "Mr." |  "FirstName"|   "LastName" |  "123456" | "26/06/1986" | "Los Chucaos"      |"Ovejeria Alto"        | "PiedPiper" | "Diez de Julio"| "100"           | "New York"   | "32" |"00000"| "21"           |"Nada que Agregarrrrrr"| "4443333"| "33334444"| "Nuevo Alias"|

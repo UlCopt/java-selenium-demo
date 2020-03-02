@@ -14,7 +14,6 @@ public class HomePage extends BasePageAbstract {
     WebElement contactLink;
 
     @FindBy(className = "header_user_info")
-    //@FindBy(xpath = "/html/body/div/div[1]/header/div[2]/div/div/nav/div[1]/a")
     WebElement singIn;
 
     public void navigateToHome() {

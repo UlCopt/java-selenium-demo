@@ -13,7 +13,6 @@ public class AuthenticationPage extends BasePageAbstract {
 
     //todo: identificadores de la pagina
 
-
     //create account
     @FindBy(id = "email_create")
     WebElement emailCreate;

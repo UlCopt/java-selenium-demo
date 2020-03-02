@@ -20,7 +20,11 @@ public class TestContext {
     public PageObjectManager getPageObjectManager() {
         return pageObjectManager;
     }
-
     //public data
+    public boolean isSelectedMr = false;
+    public boolean isSelectedMrs = false;
+    public String firstName = "";
+    public String lastName = "";
     public String email = "";
+
 }

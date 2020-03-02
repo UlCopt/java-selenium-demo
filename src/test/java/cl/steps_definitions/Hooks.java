@@ -14,7 +14,7 @@ public class Hooks {
 
     @Before
     public void beforeScenario() {
-
+        //nothing
     }
 
     @After
