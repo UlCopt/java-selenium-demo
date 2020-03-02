@@ -8,16 +8,14 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 
-import java.time.Duration;
+import static cl.config.Configuration.*;
 
-public class PageObjectHelper {
-    static Duration timeoutDuration = Duration.ofSeconds(30);
-    static Duration pollingDuration = Duration.ofSeconds(5);
+class PageObjectHelper {
 
-    public static boolean fluentWaitElement(WebDriver driver, WebElement element) {
-        Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
-                .withTimeout(timeoutDuration)
-                .pollingEvery(pollingDuration)
+    private static boolean fluentWaitElement(WebDriver driver, WebElement element) {
+        Wait<WebDriver> wait = new FluentWait<>(driver)
+                .withTimeout(TIMEOUT_DURATION)
+                .pollingEvery(POLLING_DURATION)
                 .ignoring(NoSuchElementException.class);
 
         return wait.until(a -> {
@@ -29,7 +27,7 @@ public class PageObjectHelper {
         });
     }
 
-    public static void setWebElement(WebDriver driver, WebElement element, String value) throws Exception {
+    static void setWebElement(WebDriver driver, WebElement element, String value) throws Exception {
         if (fluentWaitElement(driver, element)) {
             element.sendKeys(value);
         } else {
@@ -37,7 +35,7 @@ public class PageObjectHelper {
         }
     }
 
-    public static void clickElement(WebDriver driver, WebElement element) throws Exception {
+    static void clickElement(WebDriver driver, WebElement element) throws Exception {
         if (fluentWaitElement(driver, element)) {
             element.click();
         } else {
@@ -45,12 +43,12 @@ public class PageObjectHelper {
         }
     }
 
-    public static void selectItemBox(WebDriver driver, WebElement element, String value) {
+    static void selectItemBox(WebDriver driver, WebElement element, String value) {
         Select selectBox = new Select(element);
         selectBox.selectByValue(value);
     }
 
-    public static void scrollVertical(WebDriver driver, String x, String y) {
+    static void scrollVertical(WebDriver driver, String x, String y) {
         ((JavascriptExecutor) driver).executeScript("scroll(" + x + "," + y + ");");
     }
 

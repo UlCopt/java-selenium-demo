@@ -139,19 +139,19 @@ formatter.examples({
         "\"LastName\"",
         "\"123456\"",
         "\"26/06/1986\"",
-        "\"Address F\"",
-        "\"Address L\"",
-        "\"Company\"",
-        "\"Adressss\"",
-        "\"Address cont\"",
+        "\"Los Chucaos\"",
+        "\"Ovejeria Alto\"",
+        "\"PiedPiper\"",
+        "\"Diez de Julio\"",
+        "\"100\"",
         "\"New York\"",
         "\"32\"",
         "\"00000\"",
         "\"21\"",
-        "\"Notes\"",
+        "\"Nada que Agregarrrrrr\"",
         "\"4443333\"",
         "\"33334444\"",
-        "\"alias\""
+        "\"Nuevo Alias\""
       ]
     }
   ]
@@ -255,7 +255,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I put my address first name \"Address F\"",
+  "name": "I put my address first name \"Los Chucaos\"",
   "keyword": "And "
 });
 formatter.match({
@@ -265,7 +265,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I put my address last name \"Address L\"",
+  "name": "I put my address last name \"Ovejeria Alto\"",
   "keyword": "And "
 });
 formatter.match({
@@ -275,7 +275,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I put my company \"Company\"",
+  "name": "I put my company \"PiedPiper\"",
   "keyword": "And "
 });
 formatter.match({
@@ -285,7 +285,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I put my address company \"Adressss\"",
+  "name": "I put my address company \"Diez de Julio\"",
   "keyword": "And "
 });
 formatter.match({
@@ -295,7 +295,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I put my address company cont \"Address cont\"",
+  "name": "I put my address company cont \"100\"",
   "keyword": "And "
 });
 formatter.match({
@@ -345,7 +345,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I put some additional information \"Notes\"",
+  "name": "I put some additional information \"Nada que Agregarrrrrr\"",
   "keyword": "And "
 });
 formatter.match({
@@ -375,7 +375,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I put my alias \"alias\"",
+  "name": "I put my alias \"Nuevo Alias\"",
   "keyword": "And "
 });
 formatter.match({
